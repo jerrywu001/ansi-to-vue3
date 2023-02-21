@@ -1,0 +1,15 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc && vue-tsc && vite build",
+    "dev": "vite --host --open",
+    "dev:usepack": "cross-env USEPACK=true vite --port 5000 --open",
+    "preview": "vite preview",
+    "typecheck": "tsc && vue-tsc"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "vue-loader": "^17.0.1"
+  }
+}
