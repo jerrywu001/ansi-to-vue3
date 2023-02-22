@@ -1,6 +1,6 @@
 {
   "name": "ansi-to-vue3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This package convert ANSI escape codes to formatted text output for Vue3. Copy from ansi-to-react.",
   "keywords": [
     "vue3",
