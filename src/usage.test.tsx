@@ -15,6 +15,12 @@ function resolveHtml(str = '') {
 }
 
 describe('Ansi', () => {
+  test('can handle carriage symbol', () => {
+    const dom = render(<Ansi>{'this sentence\rthat\nwill make you pause'}</Ansi>);
+    expect(dom).not.toBeNull();
+    expect(resolveHtml(dom.container.innerHTML)).toBe('<code><span>that sentence\nwill make you pause</span></code>');
+  });
+
   test('can distinguish URL-ish text', () => {
     const dom = render(<Ansi linkify>{'<transport.model.TransportInfo'}</Ansi>);
     expect(dom).not.toBeNull();

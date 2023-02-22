@@ -17,7 +17,7 @@ function ansiToJSON(
 ): AnserJsonEntry[] {
   input = typeof input === 'string' ? input : getInnerText(input);
   input = escapeCarriageReturn(fixBackspace(input));
-  return Anser.ansiToJson(input.replace(/\n/g, '<br>'), {
+  return Anser.ansiToJson(input, {
     json: true,
     remove_empty: true,
     use_classes,
@@ -129,8 +129,8 @@ function convertBundleIntoVue(
         style,
         key,
         class: className,
-        innerHTML: bundle.content.replace(/\n/g, '<br>'),
       },
+      bundle.content,
     );
   }
 

@@ -12,9 +12,11 @@
     <br>
     <Ansi>{{ '03hello\b\b\b goodbye' }}</Ansi>
     <br>
-    <Ansi linkify>{{ 'this is a link: https://nteract.io/' }}</Ansi>
+    <Ansi linkify>{{ '  ➜  can not link:   https://localhost:5173/' }}</Ansi>
     <br>
-    <Ansi linkify>{{ 'this is a link: www.google.com' }}</Ansi>
+    <Ansi linkify>{{ '  ➜  this is a link: https://nteract.io:5173/' }}</Ansi>
+    <br>
+    <Ansi linkify>{{ '  ➜  this is a link: www.google.com' }}</Ansi>
     <br>
     <Ansi linkify>{{ "can't click this link: 'http://www.google.com'" }}</Ansi>
     <br>
@@ -45,6 +47,10 @@ const RESET = '\u001b[0;m';
 </script>
 
 <style>
+span {
+  white-space: pre;
+}
+
 .main {
   color: rgba(55, 65, 81, 1);
   position: relative;
