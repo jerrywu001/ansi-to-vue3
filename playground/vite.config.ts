@@ -10,7 +10,7 @@ export default defineConfig({
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
       '#/': `${path.resolve(__dirname, '../dist')}/`,
-      'ansi-to-vue3': path.resolve(__dirname, process.env.USEPACK === 'true' ? '../dist/esm' : '../src'),
+      'ansi-to-vue3': path.resolve(__dirname, process.env.USEPACK === 'true' ? '../dist' : '../src'),
     },
   },
   build: {
